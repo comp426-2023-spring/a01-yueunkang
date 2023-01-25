@@ -1,8 +1,8 @@
 // Require http module
-const http = require('http')
+var http = require('http')
 
 // Require fs module
-const fs = require('fs');
+var fs = require('fs');
 
 // Require minimist module (make sure you install this one via npm).
 var minimist = require ('minimist');
