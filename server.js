@@ -5,7 +5,7 @@ var http = require('http');
 var fs = require('fs');
 
 // Require minimist module (make sure you install this one via npm).
-var minimist = require ('minimist');
+var minimist = require('minimist');
 
 // Use minimist to process one argument `--port=` on the command line after `node server.js`.
 const args = minimist(process.argv.slice(2));
@@ -18,13 +18,13 @@ const port = args['port'] || 3000;
 // Use the documentation for the Node.js `fs` module. 
 // The function must read a file located at `./public/index.html` and do some stuff with it.
 // The stuff that should be inside this function is all below.
-var dataduplicate;
-fs.readFile('./public/index.html','utf8',(err,data) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  dataduplicate = data;
+var data_copy;
+fs.readFile('./public/index.html', 'utf8', (err, data) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    data_copy = data;
 })
 
 
@@ -41,9 +41,9 @@ fs.readFile('./public/index.html','utf8',(err,data) => {
 // 1. status code 200, 
 // 2. set a header with content type `text/html`, and 
 // 3. end with the data that you are reading in from ./public/index.html.
-const server = http.createServer((req,res) => {
+const server = http.createServer((req, res) => {
   res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end(dataduplicate);
+  res.end(data_copy);
 })
 
 
@@ -52,7 +52,7 @@ const server = http.createServer((req,res) => {
 // Start the `server` const listening on the port defined by argument in your `port` const. 
 // Put the exact message `Server listening on port ${port}` on the console log. 
 server.listen(port);
-console.log('Server listening on port ${port}');
+console.log(`Server listening on port ${port}`);
 
 
 
