@@ -1,5 +1,5 @@
 // Require http module
-var http = require('http')
+var http = require('http');
 
 // Require fs module
 var fs = require('fs');
@@ -43,7 +43,7 @@ fs.readFile('./public/index.html','utf8',(err,data) => {
 // 3. end with the data that you are reading in from ./public/index.html.
 const server = http.createServer((req,res) => {
   res.writeHead(200, {'Content-Type': 'text/html'});
-  res.end(data_copy);
+  res.end(dataduplicate);
 })
 
 

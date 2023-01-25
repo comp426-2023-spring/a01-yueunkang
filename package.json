@@ -4,8 +4,7 @@
   "description": "This assignment will help you get started working with Node.js by hacking your way through creating a webserver from scratch.",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js --port=5555",
-    "start": "node server.js"
+    "test": "node server.js --port=5555"
   },
   "repository": {
     "type": "git",
