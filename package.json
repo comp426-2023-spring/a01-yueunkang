@@ -2,7 +2,7 @@
   "name": "first-ever-webserver",
   "version": "0.0.1",
   "description": "This assignment will help you get started working with Node.js by hacking your way through creating a webserver from scratch.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "node server.js --port=5555",
     "start": "node server.js"
